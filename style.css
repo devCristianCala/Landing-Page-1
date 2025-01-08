@@ -349,7 +349,7 @@ footer p {
         right: -200px;
         width: 200px;
         height: 180px;
-        background-color: transparent;
+        background-color: rgba(119, 114, 114, 0.96);
         display: flex;
         flex-direction: column;
         align-items: center;
