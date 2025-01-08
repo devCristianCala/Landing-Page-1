@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!--Titulo de la web-->
+    <title>DevC2</title>
+    <!--Referencia al archivo css-->
+    <link rel="stylesheet" href="style.css">
+
+    <!--Referencia a paginas web de iconos, free-->
+
+    <!-- https://boxicons.com -->
+    <link rel="stylesheet" href="https://unpkg.com/boxicons@latest/css/boxicons.min.css">
+
+    <!-- https://remixicon.com -->
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@4.5.0/fonts/remixicon.css" rel="stylesheet" />
+
+
+    <!--Referencia tipos de fuentes-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Doto:wght@100..900&family=Kode+Mono:wght@400..700&family=Reddit+Mono:wght@200..900&family=Ubuntu+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap"
+        rel="stylesheet">
+
+</head>
+
+<body>
+
+    <header>
+        <!--<a href="#" class="logo">DEV C2</a>-->
+
+        <a href="#" class="logo">
+            <span>D</span>
+            <span>E</span>
+            <span>V</span>
+            <span></span>
+            <span>C</span>
+            <span>2</span>
+        </a>
+
+        <!--Truco para que el button sea clickeable sin usar JS-->
+        <input type="checkbox" name="checkbox" id="menuToggle">
+        <label for="menuToggle" class="menuIconAction">
+            <div class="ri-menu-fold-2-line" id="menuIcon"></div>
+        </label>
+
+        <ul class="navList">
+            <li><a href="#">Home</a></li>
+            <li><a href="#">About</a></li>
+            <li><a href="#">Portfolio</a></li>
+            <li><a href="#">Contact</a></li>
+        </ul>
+
+
+    </header>
+
+    <!--Hero section-->
+    <section class="hero">
+        <div class="heroText">
+            <h5>Developer</h5>
+            <h4>C# Tech</h4>
+            <h1>Cristian Cala</h1>
+            <p>
+                Desarrollador web. Gusto por las matemáticas y la buena redacción.
+            </p>
+            <a href="#">CV</a>
+            <a href="#" class="playList" id="playList"> <i class="ri-spotify-line"></i>Playlist</a>
+        </div>
+
+        <div class="heroImg">
+            <img src="assets/image.png" alt="DevCC image">
+        </div>
+
+    </section>
+
+    <div class="icons">
+        <a href="#"><i class="ri-youtube-fill"></i></a>
+        <a href="#"><i class="ri-twitch-fill"></i></a>
+        <a href="#"><i class="ri-github-fill"></i></a>
+    </div>
+
+    <div class="scrollDown">
+        <a href="#"><i class="ri-arrow-down-double-line"></i></a>
+    </div>
+
+    <footer>
+        <div>
+            <p>Contacto: (+57) 317 1360693</p>
+        </div>
+    </footer>
+
+</body>
+
+</html>

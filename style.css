@@ -1,0 +1,370 @@
+/*
+font-family: "Kode Mono", serif; (Reddit Mono, Doto, Ubuntu Mono)
+font-optical-sizing: auto;
+font-weight: 100px;
+font-style: normal;
+/*
+
+/*Normalizacion*/
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    /*Esto mantiene el ancho y alto a pesar de padding y border*/
+    font-family: "kode Mono";
+    list-style: none;
+    /*Quitar los puntos de decoración de las listas*/
+    text-decoration: none;
+    /*Esto quita el subrayado de los enlaces*/
+    color: white;
+}
+
+body {
+    background-color: rgb(57, 53, 53);
+}
+
+header {
+    position: fixed;
+    /*Permite que el header se quede fijo en la parte superior*/
+    right: 0;
+    top: 0;
+    z-index: 100;
+    /*Esto hace que header se muestre por encima*/
+    width: 100%;
+    display: flex;
+    /*Esto hace que los elementos se pongan en linea*/
+    align-items: center;
+    justify-content: space-between;
+    padding: 15px 3%;
+    background-color: transparent;
+}
+
+.navList {
+    display: flex;
+}
+
+.navList a {
+    margin-left: 60px;
+    font-size: 15px;
+    font-weight: 600;
+    border-bottom: 2px solid transparent;
+    /*Subrayado en la parte inferior*/
+    transition: all .5s ease 0s;
+    /*Animar todas las caracteristicas del .navList */
+}
+
+.navList a:hover {
+    border-bottom: 2px solid white;
+}
+
+/* Estilos base del enlace */
+.logo {
+    font-size: 40px;
+    font-weight: 800;
+}
+
+/* Animación wave */
+@keyframes wave {
+    0% {
+        color: #ffffff;
+        /* color base */
+    }
+
+    50% {
+        color: #7f827e;
+    }
+
+    100% {
+        color: #ffffff;
+        /* volvemos al color base */
+    }
+}
+
+/* Al colocar el cursor encima del enlace, cada span se anima */
+.logo:hover span {
+    animation: wave 1s infinite;
+    /* 1s = duración de la animación
+       infinite = se repite en bucle
+       puedes ajustar 'ease', 'linear', etc. */
+}
+
+/* Retardos para cada letra (el "delay") */
+.logo:hover span:nth-child(1) {
+    animation-delay: 0s;
+}
+
+.logo:hover span:nth-child(2) {
+    animation-delay: 0.1s;
+}
+
+.logo:hover span:nth-child(3) {
+    animation-delay: 0.2s;
+}
+
+.logo:hover span:nth-child(4) {
+    animation-delay: 0.3s;
+}
+
+.logo:hover span:nth-child(5) {
+    animation-delay: 0.4s;
+}
+
+.logo:hover span:nth-child(6) {
+    animation-delay: 0.5s;
+}
+
+#menuIcon {
+    display: block;
+    /*Se establece en none para que solo se vea cuando se colapse la pagina de forma horizontal*/
+}
+
+#menuIcon {
+    display: none;
+    font-size: 35px;
+    z-index: 101;
+    /*Para que este sobre el header*/
+    cursor: pointer;
+    /*Para que aparezca el cursor de la mano*/
+
+}
+
+#menuToggle {
+    display: none;
+    /*No ver el checkbox nunca*/
+}
+
+.menuIconAction {
+    display: block;
+    /*Para que no se le pueda hacer click*/
+}
+
+.hero {
+    height: 100%;
+    width: 100%;
+    min-height: 100vh;
+    background: linear-gradient(245.59deg, #5a5a5a 0%, #363636 25%, #1f1f1f 75%);
+    position: relative;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    /*Alinear verticalmente el hero*/
+    gap: 2rem;
+    /*Espacio de 2rem entre las dos columnas*/
+}
+
+section {
+    padding: 0 8%;
+}
+
+.heroText h5 {
+    font-size: 20px;
+    font-weight: 400;
+    margin-bottom: 25px;
+}
+
+.heroText h4 {
+    font-size: 30px;
+    font-weight: 600;
+    margin-bottom: 8px;
+}
+
+.heroText h1 {
+    font-family: "Doto", serif;
+    font-size: 50px;
+    line-height: 1;
+    margin: 0 0 30px;
+    /*0 px top, 0px right, 30px bottom, 0px left*/
+}
+
+.heroText p {
+    font-size: 80%;
+    margin-bottom: 40px;
+    line-height: 1.9;
+}
+
+.heroImg img {
+    display: block;
+    /* Evita espacios extra por inline-block */
+    max-width: 80%;
+    /* No excede el ancho de .heroImg */
+    height: auto;
+    margin: 10% 0 0 10%;
+    transition: all 0.3s linear;
+}
+
+.heroImg img:hover {
+    max-width: 90%;
+    opacity: 0.6;
+}
+
+.heroText a {
+    display: inline-block;
+    background-color: #4d4d4d;
+    border: 1px solid transparent;
+    padding: 15px 30px;
+    line-height: 1.4;
+    font-size: 14px;
+    font-weight: 500;
+    border-radius: 30px;
+    text-transform: uppercase;
+    transition: all .5s ease;
+}
+
+.heroText a:hover {
+    background-color: transparent;
+    border: 1px solid white;
+    transform: translateX(8px);
+}
+
+.heroText a.playList {
+    background-color: transparent;
+    border: 1px solid white;
+    margin-left: 20px;
+}
+
+.heroText a.playList i {
+    font-size: 20px;
+    /* Ajusta según el tamaño que desees */
+    vertical-align: middle;
+    /* Asegura que quede centrado junto al texto */
+    margin-right: 10px;
+}
+
+.icons {
+    position: absolute;
+    top: 50vh;
+    /*50, es decir el 50% o mitad de lo que se ve (vh)*/
+    padding: 0 3%;
+    /* 0% vertical y 3% horizontal*/
+    transform: translateY(-50%);
+}
+
+.icons i {
+    display: block;
+    margin: 26px 0;
+    font-size: 30px;
+    transition: all 0.5s ease;
+}
+
+.icons i:hover {
+    color: #7f827e;
+    opacity: 0.4;
+}
+
+.scrollDown {
+    position: absolute;
+    bottom: 5%;
+    right: 3%;
+}
+
+.scrollDown i {
+    display: block;
+    padding: 5px;
+    font-size: 35px;
+    transition: all 0.5s ease;
+}
+
+.scrollDown i:hover {
+    transform: translateY(-5px);
+}
+
+
+/* Estilos para el footer */
+footer {
+    width: 100%;
+    background-color: #2c2c2c; /* Cambia el color de fondo si lo deseas */
+    padding: 20px 3%;
+    border-top: 2px solid #7f827e; /* Borde superior */
+    text-align: center;
+    color: white;
+    font-size: 14px;
+}
+
+footer p {
+    margin: 0;
+}
+
+/*mediaqueries para que la web sea responsive*/
+@media (max-width:992px) {
+    section {
+        padding: 0 3%;
+        transition: 0.2 s;
+    }
+
+    .heroText {
+        padding-top: 0;
+    }
+
+    .heroImg {
+        text-align: center;
+    }
+ 
+    .heroImg img {
+        width: 80%;
+        margin: 10% 0 0 10%;
+    }
+
+    .heroText p {
+        font-size: 70%;
+    }
+
+    .icons {
+        display: none;
+    }
+
+    .scrollDown {
+        display: none;
+    }
+}
+
+@media (max-width:725px) {
+
+    .menuIconAction {
+        display: block;
+    }
+
+    #menuIcon {
+        display: block;
+    }
+
+    .heroText {
+        text-align: center;
+        padding-top: 100px;
+    }
+
+    .heroImg img {
+        margin: 50;
+        margin-bottom: 120px;
+    }
+
+    .hero {
+        height: 100%;
+        gap: 2rem;
+        grid-template-columns: 1fr;
+    }
+
+    .navList {
+        position: absolute;
+        top: 100%;
+        right: -200px;
+        width: 200px;
+        height: 180px;
+        background-color: transparent;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 30px 20px;
+        transition: all 1s ease;
+    }
+
+    .navList a {
+        margin-left: 0px;
+        display: block;
+        margin: 7px 0;
+    }
+
+    #menuToggle:checked+label.menuIconAction+ul {
+        right: 0;
+    }
+
+}
